@@ -1,6 +1,8 @@
-﻿namespace ObjectFactoryWithExpression.Factory;
+﻿using ObjectFactoryWithExpression.Features.ExpressionCreator;
 
-public class ObjectFactory
+namespace ObjectFactoryWithExpression.Factory;
+
+public static class ObjectFactory
 {
-    
+    public static object CreateInstance<T> (this Type type)where T: new() => New<T>.Instance();
 }
