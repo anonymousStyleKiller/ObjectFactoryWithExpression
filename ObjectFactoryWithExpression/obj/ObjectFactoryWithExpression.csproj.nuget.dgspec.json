@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\Contributions\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\Contributions\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\Contributions\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression.csproj",
+        "projectName": "ObjectFactoryWithExpression",
+        "projectPath": "C:\\Projects\\Contributions\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression.csproj",
+        "packagesPath": "C:\\Users\\Anton\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\Contributions\\ObjectFactoryWithExpression\\ObjectFactoryWithExpression\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Anton\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.10, 6.0.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.10, 6.0.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.10, 6.0.10]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.10, 6.0.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.305\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
