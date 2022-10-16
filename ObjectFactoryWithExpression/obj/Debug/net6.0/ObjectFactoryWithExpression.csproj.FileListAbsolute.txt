@@ -1,0 +1,15 @@
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\bin\Debug\net6.0\ObjectFactoryWithExpression.exe
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\bin\Debug\net6.0\ObjectFactoryWithExpression.deps.json
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\bin\Debug\net6.0\ObjectFactoryWithExpression.runtimeconfig.json
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\bin\Debug\net6.0\ObjectFactoryWithExpression.dll
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\bin\Debug\net6.0\ObjectFactoryWithExpression.pdb
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.csproj.AssemblyReference.cache
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.AssemblyInfoInputs.cache
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.AssemblyInfo.cs
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.csproj.CoreCompileInputs.cache
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.dll
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\refint\ObjectFactoryWithExpression.dll
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.pdb
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ObjectFactoryWithExpression.genruntimeconfig.cache
+C:\Projects\Contributions\ObjectFactoryWithExpression\ObjectFactoryWithExpression\obj\Debug\net6.0\ref\ObjectFactoryWithExpression.dll
