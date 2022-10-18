@@ -7,7 +7,7 @@ using ObjectFactoryWithExpression.Models;
 
 var list = new List<Cat>();
 var stopwatch = Stopwatch.StartNew();
-for (var i = 0; i < 1000000; i++)
+for (var i = 0; i < 1; i++)
 {
     var cat = (Cat)Activator.CreateInstance(typeof(Cat), "My cool cat", 2);
     list.Add(cat);
@@ -22,10 +22,12 @@ list = new List<Cat>();
 New<Cat>.Instance();
 
 var stopwatch2 = Stopwatch.StartNew();
-var catType = typeof(Cat);
-catType.CreateInstance<Cat>();
+// var catType = typeof(Cat);
+// catType.CreateInstance<Cat>();
 
-for (var i = 0; i < 1000000; i++)
+typeof(Cat).CreateInstance("My cool cat", 2);
+
+for (var i = 0; i < 1; i++)
 {
     var cat = (Cat)typeof(Cat).CreateInstance("My cool cat", 2);
     list.Add(cat);
