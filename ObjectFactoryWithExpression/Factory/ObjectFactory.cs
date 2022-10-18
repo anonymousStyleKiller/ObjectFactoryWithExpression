@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using System.Collections.Concurrent;
+using System.Linq.Expressions;
 using ObjectFactoryWithExpression.Features.ExpressionCreator;
 
 namespace ObjectFactoryWithExpression.Factory;
@@ -26,29 +27,35 @@ public static class ObjectFactory
     {
         private static readonly Type TypeToIgnore = typeof(TypeToIgnore);
 
+        private static readonly ConcurrentDictionary<Type, Func<TArg, TArg2, TArg3, object>>
+            _objectFactoryCache = new();
+
         public static object CreateInstance(Type type, TArg arg, TArg2 arg2, TArg3 arg3)
         {
-            var argumentsTypes = new[]
+            var objectFactoryFunc = _objectFactoryCache.GetOrAdd(type, _ =>
             {
-                typeof(TArg),
-                typeof(TArg2),
-                typeof(TArg3)
-            };
+                var argumentsTypes = new[]
+                {
+                    typeof(TArg),
+                    typeof(TArg2),
+                    typeof(TArg3)
+                };
 
-            var constructorArgumentsTypes = argumentsTypes.Where(t => t != TypeToIgnore).ToArray();
-            var constructor = type.GetConstructor(constructorArgumentsTypes);
-            if (constructor == null)
-                throw new InvalidCastException($"{type.Name} doesn't contain a constructor for the provided types:" +
-                                               $" {string.Join(", ", constructorArgumentsTypes.Select(i => i.Name))}");
-
-            var expressionsParameters = argumentsTypes
-                .Select((t, i) => Expression.Parameter(t, $"arg{i}"))
-                .ToArray();
-            var constructorParameterExpressions =
-                expressionsParameters.Take(constructorArgumentsTypes.Length).ToArray();
-            var newExpression = Expression.New(constructor, constructorParameterExpressions);
-            var expression = Expression.Lambda<Func<TArg, TArg2, TArg3, object>>(newExpression, expressionsParameters);
-            var objectFactoryFunc = expression.Compile();
+                var constructorArgumentsTypes = argumentsTypes.Where(t => t != TypeToIgnore).ToArray();
+                var constructor = type.GetConstructor(constructorArgumentsTypes);
+                if (constructor == null)
+                    throw new InvalidCastException(
+                        $"{type.Name} doesn't contain a constructor for the provided types:" +
+                        $" {string.Join(", ", constructorArgumentsTypes.Select(i => i.Name))}");
+                var expressionsParameters = argumentsTypes
+                    .Select((t, i) => Expression.Parameter(t, $"param{i}"))
+                    .ToArray();
+                var newExpression = Expression.New(constructor,
+                    expressionsParameters.Take(constructorArgumentsTypes.Length).ToArray());
+                var expression =
+                    Expression.Lambda<Func<TArg, TArg2, TArg3, object>>(newExpression, expressionsParameters);
+                return expression.Compile();
+            });
             return objectFactoryFunc(arg, arg2, arg3);
         }
     }
